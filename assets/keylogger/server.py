@@ -1,8 +1,9 @@
 import socket
 from threading import Thread
+from connections import HOST_IP, HOST_PORT
 
-SERVER_HOST = [CHANGE_TO_HOST]
-SERVER_PORT = [CHANGE_TO_PORT]
+SERVER_HOST = str(HOST_IP)
+SERVER_PORT = int(HOST_PORT)
 separator_token = "<SEP>"
 
 client_sockets = set()
