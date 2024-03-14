@@ -18,6 +18,7 @@ def setupserver():
    SR.write(ServerCode.content)
    SR.close()
 
+   #THIS BIT IS WHERE IT CRASHES
    PORT = str(PORT_ent.get())
    IP = str(IP_ent.get())
    CN = open("./connections.py", "x")
