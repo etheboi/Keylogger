@@ -1,7 +1,10 @@
+import base64
+
+
+servercode = base64.b64encode(b"""
 import socket
 from threading import Thread
 from connections import HOST_IP, HOST_PORT
-
 SERVER_HOST = str(HOST_IP)
 SERVER_PORT = int(HOST_PORT)
 separator_token = "<SEP>"
@@ -29,7 +32,6 @@ def listen_for_client(cs):
 
 while True:
     client_socket, client_address = s.accept()
-       
     print(f"New connection from {client_address}")
     client_sockets.add(client_socket)
     t = Thread(target=listen_for_client, args=(client_socket,))
@@ -39,3 +41,5 @@ while True:
 for cs in client_sockets:
     cs.close()
 s.close()
+""")                        
+exec(base64.b64decode(servercode))
