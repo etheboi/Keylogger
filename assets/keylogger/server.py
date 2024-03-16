@@ -1,7 +1,3 @@
-import base64
-
-
-servercode = base64.b64encode(b"""
 import socket
 from threading import Thread
 from connections import HOST_IP, HOST_PORT
@@ -41,5 +37,3 @@ while True:
 for cs in client_sockets:
     cs.close()
 s.close()
-""")                        
-exec(base64.b64decode(servercode))
