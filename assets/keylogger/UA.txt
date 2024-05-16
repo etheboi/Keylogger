@@ -1,0 +1,2 @@
+By accepting the UA, you agree that etheboi will not get accused of any damages or touble that is caused using this software. And that this code is for educational purposes only. Do not copy.
+UA=false
